@@ -22,8 +22,14 @@ app.get("/addition", (req, res) => {
   nums.forEach((num) => {
     sum += parseInt(num);
   });
+    
+    if (sum === NaN) {
+      return res.status(404).send('client error')
+    }
 
-  res.status(200).json({ sum: sum });
+    res.status(200).json({ sum: sum });
+    
+
 });
 
 app.get("/multiplication", (req, res) => {
@@ -45,7 +51,12 @@ app.get("/multiplication", (req, res) => {
     product *= parseInt(nums[i]);
   }
 
-  console.log(product);
+    console.log(product);
+    
+    if (product === NaN) {
+       return  res.status(404).send('client error')
+        
+    }
 
   res.status(200).json({ product: product });
 });
