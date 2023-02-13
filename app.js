@@ -23,7 +23,7 @@ app.get("/addition", (req, res) => {
     sum += parseInt(num);
   });
 
-  res.json({ sum: sum });
+  res.status(200).json({ sum: sum });
 });
 
 app.get("/multiplication", (req, res) => {
@@ -47,7 +47,7 @@ app.get("/multiplication", (req, res) => {
 
   console.log(product);
 
-  res.json({ product: product });
+  res.status(200).json({ product: product });
 });
 
 app.listen(PORT, () => {
