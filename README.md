@@ -1,8 +1,8 @@
 ### calca
 ### calculator package
 
-### use npm install calca
+### use npm install cli-calca
 ## to use my package
 
-###### WARNING: the request object must only contain one property having a the list of numbers to add
+###### WARNING: the list of numbers is got from the request url
 
